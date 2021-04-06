@@ -37,6 +37,25 @@
 
 <script>
 
+
+//JQUERY GET method through AJAX
+function load()
+{
+  var url = $("#url").val();  
+  alert("the url is :  " + url);
+
+  $.ajax({
+    url : $("#url").val(),
+    type : "GET",
+    success:function(responce){
+      
+      console.log(responce);
+    }
+  })
+
+}
+
+
 // JQuery Get Method
 
 // $("#myform").submit(function(){
@@ -73,21 +92,6 @@
 // })
 
 
-function load()
-{
-  var url = $("#url").val();  
-  alert("the url is :  " + url);
-
-  $.ajax({
-    url : $("#url").val(),
-    type : "GET",
-    success:function(responce){
-      
-      console.log(responce);
-    }
-  })
-
-}
 </script>
     
 </body>
